@@ -6,61 +6,159 @@
 
       <!-- Do not add `link` tags-->
       <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+      <link href="https://fonts.googleapis.com/css?family=Lobster" rel="stylesheet">
 
       <!-- Do not add `script` tags-->
       <script src="public/vendor.js" type="text/javascript" charset="utf-8" defer></script>
       <script src="public/application.js" type="text/javascript" charset="utf-8" defer></script>
     </head>
-    <body>
-        <div class="base">
-            <div class="menu">
-               <div class="icon">
-                  <div class="bar"></div>
-               </div>
-            </div>
-            <div class="icons">
-               <i class="fa fa-user" aria-hidden="true"></i>
-               <i class="fa fa-calendar-o" aria-hidden="true"></i>
-               <i class="fa fa-tachometer" aria-hidden="true"></i>
-            </div>
-            <div class="section">
-               <div class="cover1">
-                  <div class="cover2">
-                     <a class="content" href="#calender"></a>
-                  </div>
-               </div>
-            </div>
-            <a class="section-static top" href="#profile"></a>
-            <a class="section-static bottom" href="#dashboard"></a>
-         </div>
-        <section class="buttons">
-            <h1>Local Food Guide</h1>
-          <div class="container">
 
-            <a href="https://guide.farmfreshri.org/food/farmersmarkets.php?zip=02909" class="btn btn-1">
-              <svg>
-                <rect x="0" y="0" fill="none" width="100%" height="100%"/>
-              </svg>
-             Hover
-            <!-- </a>svg hover inspired by https://codepen.io/karimbalaa/pen/qERbBY?editors=110 -->
-            <!--End of Button 1 -->
-
-            <a href="https://twitter.com/Dave_Conner" class="btn btn-2">Hover</a>
-            <!--End of Button 2 -->
-
-            <a href="https://twitter.com/Dave_Conner" class="btn btn-3">Hover</a>
-            <!--End of Button 3 -->
-
-            <a href="https://twitter.com/Dave_Conner" class="btn btn-4"><span>Hover</span></a>
-            <!--End of Button 4 -->
-
-            <a href="https://twitter.com/Dave_Conner" class="btn btn-5">Hover</a> -->
-            <!--End of Button 5 -->
-
-
+    <body background="https://images.unsplash.com/photo-1464226184884-fa280b87c399?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=db346417b1b37f21c667fa5eff6915cd&w=1000&q=80"></body>
+    <div style="text-align:center;">
+    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal" data-whatever="@mdo">Sign Up</button>
+    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal" data-whatever="@fat">Log In</button>
+    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal" data-whatever="@getbootstrap">Change Password</button>
+    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal" data-whatever="@getbootstrap">Log Out</button>
+  </div>
+<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel"> Sign Up</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <form>
+          <div class="form-group">
+            <label for="recipient-name" class="col-form-label">Business Name:</label>
+            <input type="text" class="form-control" id="recipient-name">
           </div>
-          <!-- <p>Follow on <a href="https://twitter.com/Dave_Conner" target="_blank">Twitter</a></p> -->
-        </section>
-      <!-- <h1>Browser Template</h1> -->
-    </body>
+          <div class="form-group">
+              <label for="recipient-name" class="col-form-label">Email:</label>
+              <input type="text" class="form-control" id="recipient-name">
+            </div>
+            <div class="form-group">
+                <label for="recipient-name" class="col-form-label">Password:</label>
+                <input type="password" class="form-control" id="password">
+              </div>
+              <div class="form-group">
+                  <label for="recipient-name" class="col-form-label">Confirm Password:</label>
+                  <input type="password" class="form-control" id="password">
+                </div>
+          <div class="form-group">
+            <label for="message-text" class="col-form-label">Business Description:</label>
+            <textarea class="form-control" id="message-text"></textarea>
+          </div>
+        </form>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary">Send message</button>
+      </div>
+    </div>
+  </div>
+</div>
+    <!-- <button id="signUp" type="button" class="btn btn-primary" data-toggle="modal" data-target="#sign-up-modal">Sign Up</button>
+      <div id="sign-up-modal" class="modal fade bs-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel">
+        <div class="modal-dialog modal-lg" role="document">
+          <div id="message"></div>
+           <div class="modal-content">
+            <form id="sign-up" class="border">
+        <fieldset>
+          <legend>Sign up!</legend>
+          <input type="text" name="credentials[email]" placeholder="Email">
+          <input type="password" name="credentials[password]" placeholder="Password">
+          <input type="password" name="credentials[password_confirmation]" placeholder="Confirm Password">
+          <input type="submit" value="Sign up!">
+        </fieldset>
+      </form>
+        </div>
+       </div>
+      </div>
+
+      <button id="signIn" type="button" class="btn btn-primary" data-toggle="modal" data-target="#sign-in-modal">Sign In</button>
+      <div id="sign-in-modal" class="modal fade bs-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel">
+        <div class="modal-dialog modal-lg" role="document">
+         <div id="message2"></div>
+          <div class="modal-content">
+            <form id="sign-in" class="border">
+        <fieldset>
+          <legend>Sign in!</legend>
+          <input type="text" name="credentials[email]" placeholder="Email">
+          <input type="password" name="credentials[password]" placeholder="Password">
+          <input type="submit" value="Sign in!">
+        </fieldset>
+        <p class="message" ></p>
+      </form>
+        </div>
+       </div>
+      </div>
+     <div id= "all_content">
+      <button id="changePassword" type="button" class="btn btn-primary hidden" data-toggle="modal" data-target="#change-password-modal">Change Password</button>
+      <div id="change-password-modal" class="modal fade bs-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel">
+        <div class="modal-dialog modal-lg" role="document">
+         <div id="message"></div>
+          <div class="modal-content">
+            <form id="change-password" class="border">
+        <fieldset>
+          <legend>Change Password!</legend>
+          <input type="password" name="passwords[old]" placeholder="Old Password">
+          <input type="password" name="passwords[new]" placeholder="New Password">
+          <input type="submit" value="Change Password!">
+        </fieldset>
+      </form>
+        </div>
+       </div>
+      </div>
+
+      <button id="signOut" type="button" class="btn btn-primary hidden" data-toggle="modal" data-target="#sign-out-modal">Sign Out</button>
+      <div id="sign-out-modal" class="modal fade bs-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel">
+        <div class="modal-dialog modal-lg" role="document">
+          <div id="message"></div>
+           <div class="modal-content">
+            <form id="sign-out" class="border">
+        <fieldset>
+          <legend>Sign Out!</legend>
+          <input type="submit" value="Sign Out!">
+        </fieldset>
+      </form>
+      </div>
+        </div>
+       </div> -->
+    <section class="buttons">
+      <h1>Rhode Island</h1>
+      <h2>Local Food Guide</h2>
+    <div class="container">
+
+      <a href="https://guide.farmfreshri.org/food/search.php?q=harvest+&zip=02909" class="btn btn-1">
+        <svg>
+          <rect x="0" y="0" fill="none" width="100%" height="100%"/>
+        </svg>
+       Farms
+      <!-- </a>svg hover inspired by https://codepen.io/karimbalaa/pen/qERbBY?editors=110 -->
+      <!--End of Button 1 -->
+
+      <a href="https://guide.farmfreshri.org/food/farmersmarkets.php?zip=02909" class="btn btn-2">Farmers Market</a>
+      <!--End of Button 2 -->
+
+      <a href="https://guide.farmfreshri.org/food/restaurants.php?zip=02909" class="btn btn-3">Restaurant</a>
+      <!--End of Button 3 -->
+
+      <a href="https://guide.farmfreshri.org/food/csa.php?zip=02909" class="btn btn-4">CSA</a>
+      <!-- <a href="https://twitter.com/Dave_Conner" class="btn btn-4"><span>Hover</span></a> -->
+      <!--End of Button 4 -->
+
+      <a href="https://guide.farmfreshri.org/food/producers.php?zip=02909" class="btn btn-5">Food Producers</a>
+      <!--End of Button 5 -->
+
+      <div class="footer">For more information please visit www.farmfreshri.org<strong>
+      </strong>
+      </div>
+    </div>
+    <!-- <p>Follow on <a href="https://twitter.com/Dave_Conner" target="_blank">Twitter</a></p> -->
+  </section>
+
+
 </html>
